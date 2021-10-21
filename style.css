@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+}
+
+header{
+    position: absolute;
+    width: 1440px;
+    height: 115px;
+    left: 0px;
+    top: 0px;
+
+    background: #17A2B8;
+}
+
+header > h1{
+    margin: 0;
+    position: absolute;
+    width: 213px;
+    height: 16px;
+    left: 33px;
+    top: 49px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 16px;
+    /* identical to box height, or 22% */
+    
+    
+    color: #FFFFFF;
+}
+
+.twitterAccounts{
+    position: relative;
+    width: 645px;
+    height: 326px;
+    margin: 0 auto;
+    top: 147px;
+}
+
+h2{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 16px;
+    /* or 67% */
+
+
+    color: #000000;
+}
+
+.twitterAccounts > h2{
+    position: absolute;
+    height: 32px;
+    width: 412px;
+    left: 7px;
+    top: 0px;
+    border-radius: nullpx;
+
+
+    
+}
+
+
+.twitterAccounts > textarea{
+    
+    position: absolute;
+left: 0px;
+right: 0px;
+top: 15.64%;
+bottom: 22.7%;
+
+resize:none;
+width:645px;
+}
+
+.twitterAccounts > a{
+    position: absolute;
+    left: 41.86%;
+    right: 42.64%;
+    top: 88.34%;
+    bottom: 0%;
+
+    background: #17A2B8;
+border-radius: 4px;
+}
+
+.twitterAccounts > a > p{
+    position: absolute;
+left: 8px;
+right: 8px;
+top: 12.5px;
+bottom: 8px;
+
+margin:0;
+
+font-family: Hiragino Kaku Gothic Std;
+font-size: 16px;
+line-height: 16px;
+/* identical to box height, or 100% */
+
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+}
+
+.result{
+    position: relative;
+    height: 376px;
+    top: 205px;
+    width: 645px;
+    margin: 0 auto;
+}
+
+.result > .commonWords{
+    border: 1px solid;
+}
+
+.result > p{
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+}
