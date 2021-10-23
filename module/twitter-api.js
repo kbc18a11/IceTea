@@ -9,10 +9,9 @@ const client = new Twitter({
   access_token_secret: process.env.ACCESS_TOKEN_SECRET,
 });
 
-// let user_list = ["matsu_bouzu", "ariyoshihiroiki"];
-
 const getTweets = async (user_name) => {
   let tweets = await client.get("statuses/user_timeline", {
+    count: 200,
     screen_name: user_name,
   });
   return tweets;
@@ -31,8 +30,8 @@ const getTweetsObj = async (user_list) => {
     for (let j = 0; j < tweets.length; j++) {
       tweets_obj[user_name].push(tweets[j].text);
     }
-    return tweets_obj;
   }
+  return tweets_obj;
 };
 
 module.exports = getTweetsObj;
