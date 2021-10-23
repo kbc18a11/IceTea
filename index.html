@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="twitter-api.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -18,9 +19,9 @@
     <div class="page">
         <div class="twitterAccounts">
             <h2>Twitterアカウントを入力してください</h2>
-                <textarea name="textarea"></textarea>
+                <textarea id="text" name="textarea"></textarea>
             
-            <a><p>決定</p></a>
+            <a onclick="clickBtn()"><p>決定</p></a>
         </div>
         <div class="result">
             <h2>共通の単語一覧</h2>
