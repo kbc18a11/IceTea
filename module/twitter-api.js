@@ -29,8 +29,8 @@ const getTweetsObj = async (user_list) => {
     for (let j = 0; j < tweets.length; j++) {
       tweets_obj["user" + i].push(tweets[j].text);
     }
-    return tweets_obj;
   }
+  return tweets_obj;
 };
 
 const clickBtn = () => {
