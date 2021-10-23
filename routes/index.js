@@ -25,6 +25,8 @@ router.get('/', function (req, res, next) {
  * Twitterアカウントから単語を検索し、質問文を作成する
  */
 router.post('/search', function (req, res, next) {
+  const accountNames = req.body.accountNames.split(/\r\n|\n/)
+
   res.redirect(url.format({
     pathname: '/',
     query: {
