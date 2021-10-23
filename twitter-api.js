@@ -1,10 +1,10 @@
 import Twitter from "twitter";
 
 const client = new Twitter({
-  consumer_key: "1r66do2VeoTPoltqO1LG3TtFo",
-  consumer_secret: "7NkeMaW1swbAt28tfmwvz4UPCOcbQ5sTyQ7jolinG9bY0SXFaQ",
-  access_token_key: "1399630378718023681-IOU8M8ZnI7l0ZztcP9jxxWLSDhJVKV",
-  access_token_secret: "T5eqFitmS7Ofjk7hMig5ZfVdupgIsyLnX8n8E8kQFJMHo",
+  consumer_key: "",
+  consumer_secret: "",
+  access_token_key: "",
+  access_token_secret: "",
 });
 
 // let user_list = ["matsu_bouzu", "ariyoshihiroiki"];
