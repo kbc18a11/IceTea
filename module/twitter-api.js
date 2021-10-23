@@ -1,6 +1,6 @@
-import Twitter from "twitter";
-import dotenv from 'dotenv'
-dotenv.config();
+const Twitter = require("twitter");
+//import dotenv from 'dotenv'
+//dotenv.config();
 
 const client = new Twitter({
   consumer_key: process.env.CONSUMER_KEY,
@@ -19,6 +19,7 @@ const getTweets = async (user_name) => {
 };
 
 const getTweetsObj = async (user_list) => {
+  console.log(user_list);
   let tweets_obj = {};
   let user_name;
   let tweets;
@@ -26,21 +27,12 @@ const getTweetsObj = async (user_list) => {
   for (let i = 0; i < user_list.length; i++) {
     user_name = user_list[i];
     tweets = await getTweets(user_name);
-    tweets_obj["user" + i] = [];
+    tweets_obj[user_name] = [];
     for (let j = 0; j < tweets.length; j++) {
-      tweets_obj["user" + i].push(tweets[j].text);
+      tweets_obj[user_name].push(tweets[j].text);
     }
     return tweets_obj;
   }
 };
 
-const clickBtn = () => {
-  let tweets_obj = {};
-  let text = document.getElementById("text").value;
-  let user_list = text.split(/\r\n|\n/);
-
-  tweets_obj = getTweetsObj(user_list);
-  tweets_obj.then((tweets_obj) => {
-    console.log(tweets_obj);
-  });
-}
+module.exports = getTweetsObj;

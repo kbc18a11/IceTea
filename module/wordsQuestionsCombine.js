@@ -1,10 +1,3 @@
-const commonWords = [
-  "Swift",
-  "ハッカソン",
-  "JavaScript",
-  "IceTea"
-];
-
 const questions = [
   "をどこで知りましたか？",
   "をいつ知りましたか？",
@@ -24,7 +17,12 @@ function getRandomElement(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-let word = getRandomElement(commonWords);
-let question = getRandomElement(questions);
-let combinedText = combineWordAndQuestion(word, question)
-console.log(combinedText);
+const wordsQuestionsCombine = (commonWords) => {
+  let word = getRandomElement(commonWords);
+  let question = getRandomElement(questions);
+  let combinedText = combineWordAndQuestion(word, question)
+
+  return (combinedText);
+}
+
+module.exports = wordsQuestionsCombine;

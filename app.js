@@ -3,10 +3,19 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 var indexRouter = require('./routes/index');
 
 var app = express();
+
+
+console.log(process.env.CONSUMER_KEY);
+console.log(process.env.CONSUMER_SECRET);
+console.log(process.env.ACCESS_TOKEN_KEY);
+console.log(process.env.ACCESS_TOKEN_SECRET);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
