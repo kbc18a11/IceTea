@@ -11,12 +11,6 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
-
-console.log(process.env.CONSUMER_KEY);
-console.log(process.env.CONSUMER_SECRET);
-console.log(process.env.ACCESS_TOKEN_KEY);
-console.log(process.env.ACCESS_TOKEN_SECRET);
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
