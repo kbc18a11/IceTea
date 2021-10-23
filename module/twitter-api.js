@@ -9,10 +9,9 @@ const client = new Twitter({
   access_token_secret: process.env.ACCESS_TOKEN_SECRET,
 });
 
-// let user_list = ["matsu_bouzu", "ariyoshihiroiki"];
-
 const getTweets = async (user_name) => {
   let tweets = await client.get("statuses/user_timeline", {
+    count: 200,
     screen_name: user_name,
   });
   return tweets;
@@ -30,8 +29,8 @@ const getTweetsObj = async (user_list) => {
     for (let j = 0; j < tweets.length; j++) {
       tweets_obj["user" + i].push(tweets[j].text);
     }
-    return tweets_obj;
   }
+  return tweets_obj;
 };
 
 const clickBtn = () => {
@@ -44,3 +43,12 @@ const clickBtn = () => {
     console.log(tweets_obj);
   });
 }
+
+// 検証用（本番ではコメントアウト）
+// let user_list = ["matsu_bouzu", "ariyoshihiroiki"];
+// let tweets_obj = {};
+
+// tweets_obj = getTweetsObj(user_list);
+// tweets_obj.then((tweets_obj) => {
+// console.log(tweets_obj)
+// });
