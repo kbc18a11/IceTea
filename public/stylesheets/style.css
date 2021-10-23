@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+}
+
+header {
+  width: auto;
+  height: 115px;
+  left: 0px;
+  top: 0px;
+
+  background: #17a2b8;
+}
+
+header > h1 {
+  margin: 0;
+  position: absolute;
+  width: 213px;
+  height: 16px;
+  left: 33px;
+  top: 49px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 16px;
+
+  /* identical to box height, or 22% */
+  color: #ffffff;
+}
+
+.twitterAccounts {
+  margin-top: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 16px;
+  /* or 67% */
+
+  color: #000000;
+}
+
+.twitterAccounts > h2 {
+  height: 32px;
+  left: 7px;
+  top: 0px;
+}
+
+.twitterAccounts > textarea {
+  left: 0px;
+  right: 0px;
+  top: 15.64%;
+  bottom: 22.7%;
+
+  resize: none;
+  width: 645px;
+}
+
+.submit-button {
+  width: 20%;
+}
+.submit-content {
+  margin-top: 10px;
+  text-align: center;
+}
+.result {
+  width: auto;
+  margin: 50px auto;
+}
+.question {
+  font-family: Roboto;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.common-words-title {
+  text-align: center;
+}
+.result > .commonWords {
+  width: 645px;
+  margin: auto;
+  border: 1px solid;
+  font-size: 1.2em;
+}
