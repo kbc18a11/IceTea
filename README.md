@@ -11,7 +11,7 @@ $ npm install
 $ npm ci
 ```
 
-### 起動方法
+### 開発環境のWebプリ起動方法
 ```
 $ npm start dev
 ```
