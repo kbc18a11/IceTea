@@ -1,5 +1,5 @@
 # IceTea
-URL https://kbc18a11.github.io/IceTea/
+URL http://160.251.14.121:3000/
 
 ## 環境構築
 ### 初回
