@@ -3,6 +3,7 @@ var router = express.Router();
 const url = require('url');
 const getTweetsObj = require('../module/twitter-api');
 const wordsQuestionsCombine = require('../module/wordsQuestionsCombine');
+const extractCommonTopic = require('../module/common-topic-extraction');
 
 /**
  * ホーム画面へ遷移
@@ -33,20 +34,17 @@ router.post('/search', async (req, res, next) => {
   let question;
 
   // 共通の単語
-  const commonWords = [
-    "Swift",
-    "ハッカソン",
-    "JavaScript",
-    "IceTea"
-  ];
+  let commonWords = [];
 
   try {
 
     // ツイートを取得
     const tweets = await getTweetsObj(accountNames);
 
-    console.log(tweets);
+    // 単語の取得
+    commonWords = extractCommonTopic(tweets).words;
 
+    // 質問文の取得
     question = wordsQuestionsCombine(commonWords);
   } catch (e) {
     console.error(e);
